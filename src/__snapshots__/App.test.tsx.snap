@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="sc-bdVaJa hzZZLv"
+  >
+    <svg
+      className="sc-gzVnrw kqBCwj"
+    />
+  </div>,
+  <div
+    className="sc-bwzfXH hrSAkm"
+  >
+    <select
+      className="sc-htpNat gRKvnc"
+      onChange={[Function]}
+    >
+      <option
+        className="sc-bxivhb golqbM"
+        value="preorder"
+      >
+        preorder
+      </option>
+      <option
+        className="sc-bxivhb golqbM"
+        value="postorder"
+      >
+        postorder
+      </option>
+      <option
+        className="sc-bxivhb golqbM"
+        value="inorder"
+      >
+        inorder
+      </option>
+      <option
+        className="sc-bxivhb golqbM"
+        value="bft"
+      >
+        bft
+      </option>
+    </select>
+    <button
+      className="sc-bZQynM hZaaAU"
+      onClick={[Function]}
+    >
+      start
+    </button>
+    <div
+      className="sc-ifAKCX duHYHE"
+    />
+  </div>,
+]
+`;
