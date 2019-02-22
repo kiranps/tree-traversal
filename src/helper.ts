@@ -74,3 +74,24 @@ export const breadthFirstTraversal = (node: Node): NodeArr[] => {
   }
   return arr;
 };
+
+export function diagonal(d: any) {
+  return (
+    "M" +
+    d.source.x +
+    "," +
+    d.source.y +
+    "C" +
+    (d.source.x + d.target.x) / 2 +
+    "," +
+    d.source.y +
+    " " +
+    (d.source.x + d.target.x) / 2 +
+    "," +
+    d.target.y +
+    " " +
+    d.target.x +
+    "," +
+    d.target.y
+  );
+}

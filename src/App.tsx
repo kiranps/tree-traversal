@@ -11,32 +11,12 @@ import {
   Button
 } from "./Styled";
 import {
+  diagonal,
   inOrderTraversal,
   preOrderTraversal,
   postOrderTraversal,
   breadthFirstTraversal
 } from "./helper";
-
-function diagonal(d: any) {
-  return (
-    "M" +
-    d.source.x +
-    "," +
-    d.source.y +
-    "C" +
-    (d.source.x + d.target.x) / 2 +
-    "," +
-    d.source.y +
-    " " +
-    (d.source.x + d.target.x) / 2 +
-    "," +
-    d.target.y +
-    " " +
-    d.target.x +
-    "," +
-    d.target.y
-  );
-}
 
 class App extends Component {
   root: any;
@@ -72,6 +52,7 @@ class App extends Component {
       .attr("cy", (d: any) => d.y)
       .attr("r", 15);
 
+    // text
     nodes
       .append("text")
       .attr("dx", (d: any) => d.x - 7)
@@ -96,9 +77,7 @@ class App extends Component {
 
   handleChange = (e: React.FormEvent<HTMLSelectElement>) => {
     let traversalType = e.currentTarget.value;
-
     this.resetNodes();
-    this.setState({ tree: [] });
 
     switch (traversalType) {
       case "preorder":
@@ -114,7 +93,6 @@ class App extends Component {
         this.arr = breadthFirstTraversal(this.root);
         break;
     }
-    console.log(this.arr);
   };
 
   resetNodes = () => {
@@ -139,8 +117,7 @@ class App extends Component {
   };
 
   startTraversal = () => {
-    console.log(this.arr);
-    this.setState({ traversing: true });
+    this.setState({ traversing: true, tree: [] });
     this.animateTraversal(this.arr);
   };
 
