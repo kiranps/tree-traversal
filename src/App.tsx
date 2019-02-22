@@ -7,7 +7,8 @@ import {
   Select,
   Option,
   TraversedList,
-  Item
+  Item,
+  Button
 } from "./Styled";
 import {
   inOrderTraversal,
@@ -39,15 +40,18 @@ function diagonal(d: any) {
 
 class App extends Component {
   root: any;
+  traversal: any;
+  arr: any;
   constructor(props: any) {
     super(props);
     const treeLayout = d3.tree().size([320, 200]);
     const root = d3.hierarchy(TREE_DATA);
     treeLayout(root);
     this.root = root;
+    this.arr = preOrderTraversal(this.root);
   }
 
-  state = { traversalType: null, stop: false, tree: [] };
+  state = { traversalType: "preorder", traversing: false, tree: [] };
 
   componentDidMount() {
     const nodes = d3
@@ -92,27 +96,25 @@ class App extends Component {
 
   handleChange = (e: React.FormEvent<HTMLSelectElement>) => {
     let traversalType = e.currentTarget.value;
-    let arr: any[] = [];
 
     this.resetNodes();
     this.setState({ tree: [] });
 
     switch (traversalType) {
       case "preorder":
-        arr = preOrderTraversal(this.root);
+        this.arr = preOrderTraversal(this.root);
         break;
       case "postorder":
-        arr = postOrderTraversal(this.root);
+        this.arr = postOrderTraversal(this.root);
         break;
       case "inorder":
-        arr = inOrderTraversal(this.root);
+        this.arr = inOrderTraversal(this.root);
         break;
       case "bft":
-        arr = breadthFirstTraversal(this.root);
+        this.arr = breadthFirstTraversal(this.root);
         break;
     }
-
-    this.animateTraversal(arr);
+    console.log(this.arr);
   };
 
   resetNodes = () => {
@@ -126,9 +128,25 @@ class App extends Component {
       .attr("fill", "#5f5f5f");
   };
 
+  toggleTraversal = () => {
+    this.state.traversing ? this.stopTraversal() : this.startTraversal();
+  };
+
+  stopTraversal = () => {
+    clearTimeout(this.traversal);
+    this.resetNodes();
+    this.setState({ traversing: false, tree: [] });
+  };
+
+  startTraversal = () => {
+    console.log(this.arr);
+    this.setState({ traversing: true });
+    this.animateTraversal(this.arr);
+  };
+
   animateTraversal = (arr: any[]) => {
     if (arr.length > 0) {
-      setTimeout(() => {
+      this.traversal = setTimeout(() => {
         const x = arr[0];
         this.setState({ tree: [...this.state.tree, x.value] });
         d3.select("svg g.nodes")
@@ -148,7 +166,7 @@ class App extends Component {
   };
 
   render() {
-    const { tree } = this.state;
+    const { tree, traversing } = this.state;
     return (
       <Fragment>
         <TreeBox>
@@ -166,6 +184,9 @@ class App extends Component {
             <Option value="inorder">inorder</Option>
             <Option value="bft">bft</Option>
           </Select>
+          <Button onClick={this.toggleTraversal}>
+            {traversing ? "stop" : "start"}
+          </Button>
           <TraversedList>
             {tree.map((x, i) => (
               <Item key={i}>{x}</Item>
