@@ -67,4 +67,18 @@ const Button = styled.button`
   user-select: none;
 `;
 
-export { TreeBox, SelectionBox, Select, Option, TraversedList, Item, Button };
+const Tree = styled.svg`
+  width: 200px;
+  height: 260px;
+`;
+
+export {
+  TreeBox,
+  Tree,
+  SelectionBox,
+  Select,
+  Option,
+  TraversedList,
+  Item,
+  Button
+};
