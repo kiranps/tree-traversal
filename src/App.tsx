@@ -36,7 +36,7 @@ class App extends Component {
     this.chart = React.createRef();
   }
 
-  state = { traversalType: "preorder", traversing: false, tree: [] };
+  state = { traversing: false, tree: [] };
 
   componentDidMount() {
     const chart = d3
@@ -84,8 +84,8 @@ class App extends Component {
       .text((d: any) => d.value);
   }
 
-  handleChange = (e: React.FormEvent<HTMLSelectElement>) => {
-    let traversalType = e.currentTarget.value;
+  handleChange = (e: any) => {
+    let traversalType = e.target.value;
 
     switch (traversalType) {
       case "preorder":
@@ -147,7 +147,7 @@ class App extends Component {
           .attr("fill", "#fff");
 
         this.animateTraversal(arr.slice(1));
-      }, 2000);
+      }, 1000);
     }
   };
 
