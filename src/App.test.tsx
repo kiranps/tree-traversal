@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import renderer from "react-test-renderer";
+import { mount } from "enzyme";
 import App from "./App";
 
 it("renders without crashing", () => {
@@ -10,6 +11,8 @@ it("renders without crashing", () => {
 });
 
 it("renders correctly", () => {
-  const tree = renderer.create(<App />).toJSON();
-  expect(tree).toMatchSnapshot();
+  // const tree = renderer.create(<App />).toJSON();
+  // expect(tree).toMatchSnapshot();
+  const component = mount(<App />);
+  expect(component).toMatchSnapshot();
 });

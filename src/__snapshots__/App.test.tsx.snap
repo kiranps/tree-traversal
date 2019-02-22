@@ -1,55 +1,543 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
-  <div
-    className="sc-bdVaJa hzZZLv"
-  >
-    <svg
-      className="sc-gzVnrw kqBCwj"
-    />
-  </div>,
-  <div
-    className="sc-bwzfXH hrSAkm"
-  >
-    <select
-      className="sc-htpNat gRKvnc"
-      onChange={[Function]}
+<App>
+  <TreeBox>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "TreeBox-gzi78k-0",
+            "isStatic": true,
+            "lastClassName": "sWcqm",
+            "rules": Array [
+              "position:absolute;left:0;top:0;bottom:0;width:50%;text-align:center;padding-top:14%;",
+            ],
+          },
+          "displayName": "TreeBox",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "TreeBox-gzi78k-0",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <option
-        className="sc-bxivhb golqbM"
-        value="preorder"
+      <div
+        className="TreeBox-gzi78k-0 sWcqm"
       >
-        preorder
-      </option>
-      <option
-        className="sc-bxivhb golqbM"
-        value="postorder"
-      >
-        postorder
-      </option>
-      <option
-        className="sc-bxivhb golqbM"
-        value="inorder"
-      >
-        inorder
-      </option>
-      <option
-        className="sc-bxivhb golqbM"
-        value="bft"
-      >
-        bft
-      </option>
-    </select>
-    <button
-      className="sc-bZQynM hZaaAU"
-      onClick={[Function]}
+        <Tree>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "Tree-gzi78k-7",
+                  "isStatic": true,
+                  "lastClassName": "dZHjRf",
+                  "rules": Array [
+                    "width:200px;height:260px;",
+                  ],
+                },
+                "displayName": "Tree",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "Tree-gzi78k-7",
+                "target": "svg",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={
+              Object {
+                "current": <svg
+                  class="Tree-gzi78k-7 dZHjRf"
+                >
+                  <g
+                    transform="translate(-70, 30)"
+                  >
+                    <g>
+                      <path
+                        d="M182.85714285714286,0C160,0 160,66.66666666666667 137.14285714285714,66.66666666666667"
+                        fill="none"
+                        stroke="#555"
+                        stroke-opacity="0.4"
+                        stroke-width="1.5px"
+                      />
+                      <path
+                        d="M182.85714285714286,0C205.71428571428572,0 205.71428571428572,66.66666666666667 228.57142857142858,66.66666666666667"
+                        fill="none"
+                        stroke="#555"
+                        stroke-opacity="0.4"
+                        stroke-width="1.5px"
+                      />
+                      <path
+                        d="M137.14285714285714,66.66666666666667C114.28571428571428,66.66666666666667 114.28571428571428,133.33333333333334 91.42857142857143,133.33333333333334"
+                        fill="none"
+                        stroke="#555"
+                        stroke-opacity="0.4"
+                        stroke-width="1.5px"
+                      />
+                      <path
+                        d="M137.14285714285714,66.66666666666667C160,66.66666666666667 160,133.33333333333334 182.85714285714286,133.33333333333334"
+                        fill="none"
+                        stroke="#555"
+                        stroke-opacity="0.4"
+                        stroke-width="1.5px"
+                      />
+                      <path
+                        d="M182.85714285714286,133.33333333333334C160,133.33333333333334 160,200 137.14285714285714,200"
+                        fill="none"
+                        stroke="#555"
+                        stroke-opacity="0.4"
+                        stroke-width="1.5px"
+                      />
+                      <path
+                        d="M182.85714285714286,133.33333333333334C205.71428571428572,133.33333333333334 205.71428571428572,200 228.57142857142858,200"
+                        fill="none"
+                        stroke="#555"
+                        stroke-opacity="0.4"
+                        stroke-width="1.5px"
+                      />
+                    </g>
+                    <g>
+                      <g>
+                        <circle
+                          cx="182.85714285714286"
+                          cy="0"
+                          fill="#fff"
+                          r="15"
+                          stroke="#555"
+                          stroke-opacity="0.6"
+                          stroke-width="3px"
+                        />
+                        <text
+                          dx="175.85714285714286"
+                          dy="4"
+                          fill="#5f5f5f"
+                          font-size="12px"
+                        >
+                          34
+                        </text>
+                      </g>
+                      <g>
+                        <circle
+                          cx="137.14285714285714"
+                          cy="66.66666666666667"
+                          fill="#fff"
+                          r="15"
+                          stroke="#555"
+                          stroke-opacity="0.6"
+                          stroke-width="3px"
+                        />
+                        <text
+                          dx="130.14285714285714"
+                          dy="70.66666666666667"
+                          fill="#5f5f5f"
+                          font-size="12px"
+                        >
+                          23
+                        </text>
+                      </g>
+                      <g>
+                        <circle
+                          cx="228.57142857142858"
+                          cy="66.66666666666667"
+                          fill="#fff"
+                          r="15"
+                          stroke="#555"
+                          stroke-opacity="0.6"
+                          stroke-width="3px"
+                        />
+                        <text
+                          dx="221.57142857142858"
+                          dy="70.66666666666667"
+                          fill="#5f5f5f"
+                          font-size="12px"
+                        >
+                          92
+                        </text>
+                      </g>
+                      <g>
+                        <circle
+                          cx="91.42857142857143"
+                          cy="133.33333333333334"
+                          fill="#fff"
+                          r="15"
+                          stroke="#555"
+                          stroke-opacity="0.6"
+                          stroke-width="3px"
+                        />
+                        <text
+                          dx="84.42857142857143"
+                          dy="137.33333333333334"
+                          fill="#5f5f5f"
+                          font-size="12px"
+                        >
+                          12
+                        </text>
+                      </g>
+                      <g>
+                        <circle
+                          cx="182.85714285714286"
+                          cy="133.33333333333334"
+                          fill="#fff"
+                          r="15"
+                          stroke="#555"
+                          stroke-opacity="0.6"
+                          stroke-width="3px"
+                        />
+                        <text
+                          dx="175.85714285714286"
+                          dy="137.33333333333334"
+                          fill="#5f5f5f"
+                          font-size="12px"
+                        >
+                          4
+                        </text>
+                      </g>
+                      <g>
+                        <circle
+                          cx="137.14285714285714"
+                          cy="200"
+                          fill="#fff"
+                          r="15"
+                          stroke="#555"
+                          stroke-opacity="0.6"
+                          stroke-width="3px"
+                        />
+                        <text
+                          dx="130.14285714285714"
+                          dy="204"
+                          fill="#5f5f5f"
+                          font-size="12px"
+                        >
+                          16
+                        </text>
+                      </g>
+                      <g>
+                        <circle
+                          cx="228.57142857142858"
+                          cy="200"
+                          fill="#fff"
+                          r="15"
+                          stroke="#555"
+                          stroke-opacity="0.6"
+                          stroke-width="3px"
+                        />
+                        <text
+                          dx="221.57142857142858"
+                          dy="204"
+                          fill="#5f5f5f"
+                          font-size="12px"
+                        >
+                          9
+                        </text>
+                      </g>
+                    </g>
+                  </g>
+                </svg>,
+              }
+            }
+          >
+            <svg
+              className="Tree-gzi78k-7 dZHjRf"
+            />
+          </StyledComponent>
+        </Tree>
+      </div>
+    </StyledComponent>
+  </TreeBox>
+  <SelectionBox>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "SelectionBox-gzi78k-1",
+            "isStatic": true,
+            "lastClassName": "drXKbc",
+            "rules": Array [
+              "position:absolute;right:0;top:0;bottom:0;width:50%;background-color:#eee;text-align:center;padding-top:20%;",
+            ],
+          },
+          "displayName": "SelectionBox",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "SelectionBox-gzi78k-1",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      start
-    </button>
-    <div
-      className="sc-ifAKCX duHYHE"
-    />
-  </div>,
-]
+      <div
+        className="SelectionBox-gzi78k-1 drXKbc"
+      >
+        <Select
+          onChange={[Function]}
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "Select-gzi78k-2",
+                  "isStatic": true,
+                  "lastClassName": "jYZjfo",
+                  "rules": Array [
+                    "width:200px;height:40px;text-align:center;background-color:#fff;outline:none;margin:10px auto;padding:5px 10px;border:1px solid #d6d6d6;color:#5f5f5f;",
+                  ],
+                },
+                "displayName": "Select",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "Select-gzi78k-2",
+                "target": "select",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            onChange={[Function]}
+          >
+            <select
+              className="Select-gzi78k-2 jYZjfo"
+              onChange={[Function]}
+            >
+              <Option
+                value="preorder"
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "Option-gzi78k-3",
+                        "isStatic": true,
+                        "lastClassName": "kxuIac",
+                        "rules": Array [
+                          "color:#5f5f5f;",
+                        ],
+                      },
+                      "displayName": "Option",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "Option-gzi78k-3",
+                      "target": "option",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  value="preorder"
+                >
+                  <option
+                    className="Option-gzi78k-3 kxuIac"
+                    value="preorder"
+                  >
+                    preorder
+                  </option>
+                </StyledComponent>
+              </Option>
+              <Option
+                value="postorder"
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "Option-gzi78k-3",
+                        "isStatic": true,
+                        "lastClassName": "kxuIac",
+                        "rules": Array [
+                          "color:#5f5f5f;",
+                        ],
+                      },
+                      "displayName": "Option",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "Option-gzi78k-3",
+                      "target": "option",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  value="postorder"
+                >
+                  <option
+                    className="Option-gzi78k-3 kxuIac"
+                    value="postorder"
+                  >
+                    postorder
+                  </option>
+                </StyledComponent>
+              </Option>
+              <Option
+                value="inorder"
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "Option-gzi78k-3",
+                        "isStatic": true,
+                        "lastClassName": "kxuIac",
+                        "rules": Array [
+                          "color:#5f5f5f;",
+                        ],
+                      },
+                      "displayName": "Option",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "Option-gzi78k-3",
+                      "target": "option",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  value="inorder"
+                >
+                  <option
+                    className="Option-gzi78k-3 kxuIac"
+                    value="inorder"
+                  >
+                    inorder
+                  </option>
+                </StyledComponent>
+              </Option>
+              <Option
+                value="bft"
+              >
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "Option-gzi78k-3",
+                        "isStatic": true,
+                        "lastClassName": "kxuIac",
+                        "rules": Array [
+                          "color:#5f5f5f;",
+                        ],
+                      },
+                      "displayName": "Option",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "Option-gzi78k-3",
+                      "target": "option",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  value="bft"
+                >
+                  <option
+                    className="Option-gzi78k-3 kxuIac"
+                    value="bft"
+                  >
+                    bft
+                  </option>
+                </StyledComponent>
+              </Option>
+            </select>
+          </StyledComponent>
+        </Select>
+        <Button
+          onClick={[Function]}
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "Button-gzi78k-6",
+                  "isStatic": true,
+                  "lastClassName": "gwyvcj",
+                  "rules": Array [
+                    "margin-left:10px;border:1px solid #d6d6d6;color:#5f5f5f;background-color:#fff;border-radius:3px;height:40px;cursor:pointer;outline:none;min-width:100px;user-select:none;",
+                  ],
+                },
+                "displayName": "Button",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "Button-gzi78k-6",
+                "target": "button",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            onClick={[Function]}
+          >
+            <button
+              className="Button-gzi78k-6 gwyvcj"
+              onClick={[Function]}
+            >
+              start
+            </button>
+          </StyledComponent>
+        </Button>
+        <TraversedList>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "TraversedList-gzi78k-4",
+                  "isStatic": true,
+                  "lastClassName": "eUAOUJ",
+                  "rules": Array [
+                    "margin-top:10px;",
+                  ],
+                },
+                "displayName": "TraversedList",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "TraversedList-gzi78k-4",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="TraversedList-gzi78k-4 eUAOUJ"
+            />
+          </StyledComponent>
+        </TraversedList>
+      </div>
+    </StyledComponent>
+  </SelectionBox>
+</App>
 `;
