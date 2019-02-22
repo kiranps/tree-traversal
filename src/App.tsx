@@ -1,8 +1,179 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import * as d3 from "d3";
+import { TREE_DATA } from "./constants";
+import {
+  TreeBox,
+  SelectionBox,
+  Select,
+  Option,
+  TraversedList,
+  Item
+} from "./Styled";
+import {
+  inOrderTraversal,
+  preOrderTraversal,
+  postOrderTraversal,
+  breadthFirstTraversal
+} from "./helper";
+
+function diagonal(d: any) {
+  return (
+    "M" +
+    d.source.x +
+    "," +
+    d.source.y +
+    "C" +
+    (d.source.x + d.target.x) / 2 +
+    "," +
+    d.source.y +
+    " " +
+    (d.source.x + d.target.x) / 2 +
+    "," +
+    d.target.y +
+    " " +
+    d.target.x +
+    "," +
+    d.target.y
+  );
+}
 
 class App extends Component {
+  root: any;
+  constructor(props: any) {
+    super(props);
+    const treeLayout = d3.tree().size([320, 200]);
+    const root = d3.hierarchy(TREE_DATA);
+    treeLayout(root);
+    this.root = root;
+  }
+
+  state = { traversalType: null, stop: false, tree: [] };
+
+  componentDidMount() {
+    const nodes = d3
+      .select("svg g.nodes")
+      .selectAll("circle.node")
+      .data(this.root.descendants())
+      .enter()
+      .append("g");
+
+    // nodes
+    nodes
+      .append("circle")
+      .attr("stroke", "#555")
+      .attr("stroke-opacity", 0.6)
+      .attr("stroke-width", "3px")
+      .attr("fill", "#fff")
+      .attr("cx", (d: any) => d.x)
+      .attr("cy", (d: any) => d.y)
+      .attr("r", 15);
+
+    nodes
+      .append("text")
+      .attr("dx", (d: any) => d.x - 7)
+      .attr("dy", (d: any) => d.y + 4)
+      .attr("font-size", "12px")
+      .attr("fill", "#5f5f5f")
+      .attr("text-anchor", "start")
+      .text((d: any) => d.value);
+
+    // links
+    d3.select("svg g.paths")
+      .selectAll("path")
+      .data(this.root.links())
+      .enter()
+      .append("path")
+      .attr("d", (d: any) => diagonal(d))
+      .attr("fill", "none")
+      .attr("stroke", "#555")
+      .attr("stroke-opacity", 0.4)
+      .attr("stroke-width", "1.5px");
+  }
+
+  handleChange = (e: React.FormEvent<HTMLSelectElement>) => {
+    let traversalType = e.currentTarget.value;
+    let arr: any[] = [];
+
+    this.resetNodes();
+    this.setState({ tree: [] });
+
+    switch (traversalType) {
+      case "preorder":
+        arr = preOrderTraversal(this.root);
+        break;
+      case "postorder":
+        arr = postOrderTraversal(this.root);
+        break;
+      case "inorder":
+        arr = inOrderTraversal(this.root);
+        break;
+      case "bft":
+        arr = breadthFirstTraversal(this.root);
+        break;
+    }
+
+    this.animateTraversal(arr);
+  };
+
+  resetNodes = () => {
+    d3.select("svg g.nodes")
+      .selectAll("circle")
+      .attr("fill", "#fff")
+      .attr("stroke", "#555");
+
+    d3.select("svg g.nodes")
+      .selectAll("text")
+      .attr("fill", "#5f5f5f");
+  };
+
+  animateTraversal = (arr: any[]) => {
+    if (arr.length > 0) {
+      setTimeout(() => {
+        const x = arr[0];
+        this.setState({ tree: [...this.state.tree, x.value] });
+        d3.select("svg g.nodes")
+          .selectAll("circle")
+          .filter((d: any) => x.x === d.x && x.y === d.y)
+          .attr("fill", "#2196F3")
+          .attr("stroke", "#2196F3");
+
+        d3.select("svg g.nodes")
+          .selectAll("text")
+          .filter((d: any) => x.x === d.x && x.y === d.y)
+          .attr("fill", "#fff");
+
+        this.animateTraversal(arr.slice(1));
+      }, 2000);
+    }
+  };
+
   render() {
-    return <div>hello world</div>;
+    const { tree } = this.state;
+    return (
+      <Fragment>
+        <TreeBox>
+          <svg width="200" height="260">
+            <g transform="translate(-70, 30)">
+              <g className="paths" />
+              <g className="nodes" />
+            </g>
+          </svg>
+        </TreeBox>
+        <SelectionBox>
+          <Select onChange={this.handleChange}>
+            <Option value="preorder">preorder</Option>
+            <Option value="postorder">postorder</Option>
+            <Option value="inorder">inorder</Option>
+            <Option value="bft">bft</Option>
+          </Select>
+          <TraversedList>
+            {tree.map((x, i) => (
+              <Item key={i}>{x}</Item>
+            ))}
+          </TraversedList>
+        </SelectionBox>
+      </Fragment>
+    );
   }
 }
 
