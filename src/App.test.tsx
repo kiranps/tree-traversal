@@ -16,9 +16,19 @@ it("should match with snapshot", () => {
   expect(component).toMatchSnapshot();
 });
 
-it("should render Tree diagram", () => {
+it("should render Tree Chart", () => {
   const component = mount(<App />);
-  expect(component.find("Tree").length).toEqual(1);
+  expect(component.find("TreeChart").length).toEqual(1);
+});
+
+it("should render Seven Circles", () => {
+  const component = mount(<App />);
+  expect(component.find("Circle").length).toEqual(7);
+});
+
+it("should render Six Paths", () => {
+  const component = mount(<App />);
+  expect(component.find("Path").length).toEqual(6);
 });
 
 it("should animate the tree in inorder", () => {
@@ -26,9 +36,9 @@ it("should animate the tree in inorder", () => {
   const component = mount(<App />);
   component.find("Select").simulate("change", { target: { value: "inorder" } });
   component.find("Button").simulate("click");
-  jest.runAllTimers();
-  component.update();
   inorder.forEach((x, i) => {
+    jest.advanceTimersByTime(1500);
+    component.update();
     expect(
       component
         .find("Item")
@@ -45,9 +55,9 @@ it("should animate tree in postorder", () => {
     .find("Select")
     .simulate("change", { target: { value: "postorder" } });
   component.find("Button").simulate("click");
-  jest.runAllTimers();
-  component.update();
   postorder.forEach((x, i) => {
+    jest.advanceTimersByTime(1500);
+    component.update();
     expect(
       component
         .find("Item")
@@ -64,9 +74,9 @@ it("should animate tree in preorder", () => {
     .find("Select")
     .simulate("change", { target: { value: "preorder" } });
   component.find("Button").simulate("click");
-  jest.runAllTimers();
-  component.update();
   preorder.forEach((x, i) => {
+    jest.advanceTimersByTime(1500);
+    component.update();
     expect(
       component
         .find("Item")
@@ -81,9 +91,9 @@ it("should animate tree in bft", () => {
   const component = mount(<App />);
   component.find("Select").simulate("change", { target: { value: "bft" } });
   component.find("Button").simulate("click");
-  jest.runAllTimers();
-  component.update();
   bft.forEach((x, i) => {
+    jest.advanceTimersByTime(1500);
+    component.update();
     expect(
       component
         .find("Item")

@@ -31,227 +31,939 @@ exports[`should match with snapshot 1`] = `
       <div
         className="TreeBox-gzi78k-0 sWcqm"
       >
-        <Tree>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "Tree-gzi78k-7",
-                  "isStatic": true,
-                  "lastClassName": "dZHjRf",
-                  "rules": Array [
-                    "width:200px;height:260px;",
+        <TreeChart
+          data={
+            Object {
+              "children": Array [
+                Object {
+                  "children": Array [
+                    Object {
+                      "children": Array [],
+                      "value": "12",
+                    },
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [],
+                          "value": "16",
+                        },
+                        Object {
+                          "children": Array [],
+                          "value": "09",
+                        },
+                      ],
+                      "value": "04",
+                    },
                   ],
+                  "value": "23",
                 },
-                "displayName": "Tree",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "Tree-gzi78k-7",
-                "target": "svg",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
+                Object {
+                  "children": Array [],
+                  "value": "92",
+                },
+              ],
+              "value": "34",
             }
-            forwardedRef={
-              Object {
-                "current": <svg
-                  class="Tree-gzi78k-7 dZHjRf"
-                >
-                  <g
-                    transform="translate(-70, 30)"
+          }
+          parsed={Array []}
+        >
+          <SVG>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "SVG-gzi78k-8",
+                    "isStatic": true,
+                    "lastClassName": "gUzXMl",
+                    "rules": Array [
+                      "width:200px;height:260px;",
+                    ],
+                  },
+                  "displayName": "SVG",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "SVG-gzi78k-8",
+                  "target": "svg",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <svg
+                className="SVG-gzi78k-8 gUzXMl"
+              >
+                <Translate>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "Translate-gzi78k-12",
+                          "isStatic": true,
+                          "lastClassName": "isXeyr",
+                          "rules": Array [
+                            "transform:translate(-70px,30px);",
+                          ],
+                        },
+                        "displayName": "Translate",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "Translate-gzi78k-12",
+                        "target": "g",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
                   >
-                    <g>
-                      <path
+                    <g
+                      className="Translate-gzi78k-12 isXeyr"
+                    >
+                      <Path
                         d="M182.85714285714286,0C160,0 160,66.66666666666667 137.14285714285714,66.66666666666667"
-                        fill="none"
-                        stroke="#555"
-                        stroke-opacity="0.4"
-                        stroke-width="1.5px"
-                      />
-                      <path
+                        key="0"
+                      >
+                        <StyledComponent
+                          d="M182.85714285714286,0C160,0 160,66.66666666666667 137.14285714285714,66.66666666666667"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Path-gzi78k-9",
+                                "isStatic": true,
+                                "lastClassName": "dKmgdJ",
+                                "rules": Array [
+                                  "fill:none;stroke:#555;stroke-width:1.5px;stroke-opacity:0.5;",
+                                ],
+                              },
+                              "displayName": "Path",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Path-gzi78k-9",
+                              "target": "path",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <path
+                            className="Path-gzi78k-9 dKmgdJ"
+                            d="M182.85714285714286,0C160,0 160,66.66666666666667 137.14285714285714,66.66666666666667"
+                          />
+                        </StyledComponent>
+                      </Path>
+                      <Path
                         d="M182.85714285714286,0C205.71428571428572,0 205.71428571428572,66.66666666666667 228.57142857142858,66.66666666666667"
-                        fill="none"
-                        stroke="#555"
-                        stroke-opacity="0.4"
-                        stroke-width="1.5px"
-                      />
-                      <path
+                        key="1"
+                      >
+                        <StyledComponent
+                          d="M182.85714285714286,0C205.71428571428572,0 205.71428571428572,66.66666666666667 228.57142857142858,66.66666666666667"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Path-gzi78k-9",
+                                "isStatic": true,
+                                "lastClassName": "dKmgdJ",
+                                "rules": Array [
+                                  "fill:none;stroke:#555;stroke-width:1.5px;stroke-opacity:0.5;",
+                                ],
+                              },
+                              "displayName": "Path",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Path-gzi78k-9",
+                              "target": "path",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <path
+                            className="Path-gzi78k-9 dKmgdJ"
+                            d="M182.85714285714286,0C205.71428571428572,0 205.71428571428572,66.66666666666667 228.57142857142858,66.66666666666667"
+                          />
+                        </StyledComponent>
+                      </Path>
+                      <Path
                         d="M137.14285714285714,66.66666666666667C114.28571428571428,66.66666666666667 114.28571428571428,133.33333333333334 91.42857142857143,133.33333333333334"
-                        fill="none"
-                        stroke="#555"
-                        stroke-opacity="0.4"
-                        stroke-width="1.5px"
-                      />
-                      <path
+                        key="2"
+                      >
+                        <StyledComponent
+                          d="M137.14285714285714,66.66666666666667C114.28571428571428,66.66666666666667 114.28571428571428,133.33333333333334 91.42857142857143,133.33333333333334"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Path-gzi78k-9",
+                                "isStatic": true,
+                                "lastClassName": "dKmgdJ",
+                                "rules": Array [
+                                  "fill:none;stroke:#555;stroke-width:1.5px;stroke-opacity:0.5;",
+                                ],
+                              },
+                              "displayName": "Path",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Path-gzi78k-9",
+                              "target": "path",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <path
+                            className="Path-gzi78k-9 dKmgdJ"
+                            d="M137.14285714285714,66.66666666666667C114.28571428571428,66.66666666666667 114.28571428571428,133.33333333333334 91.42857142857143,133.33333333333334"
+                          />
+                        </StyledComponent>
+                      </Path>
+                      <Path
                         d="M137.14285714285714,66.66666666666667C160,66.66666666666667 160,133.33333333333334 182.85714285714286,133.33333333333334"
-                        fill="none"
-                        stroke="#555"
-                        stroke-opacity="0.4"
-                        stroke-width="1.5px"
-                      />
-                      <path
+                        key="3"
+                      >
+                        <StyledComponent
+                          d="M137.14285714285714,66.66666666666667C160,66.66666666666667 160,133.33333333333334 182.85714285714286,133.33333333333334"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Path-gzi78k-9",
+                                "isStatic": true,
+                                "lastClassName": "dKmgdJ",
+                                "rules": Array [
+                                  "fill:none;stroke:#555;stroke-width:1.5px;stroke-opacity:0.5;",
+                                ],
+                              },
+                              "displayName": "Path",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Path-gzi78k-9",
+                              "target": "path",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <path
+                            className="Path-gzi78k-9 dKmgdJ"
+                            d="M137.14285714285714,66.66666666666667C160,66.66666666666667 160,133.33333333333334 182.85714285714286,133.33333333333334"
+                          />
+                        </StyledComponent>
+                      </Path>
+                      <Path
                         d="M182.85714285714286,133.33333333333334C160,133.33333333333334 160,200 137.14285714285714,200"
-                        fill="none"
-                        stroke="#555"
-                        stroke-opacity="0.4"
-                        stroke-width="1.5px"
-                      />
-                      <path
+                        key="4"
+                      >
+                        <StyledComponent
+                          d="M182.85714285714286,133.33333333333334C160,133.33333333333334 160,200 137.14285714285714,200"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Path-gzi78k-9",
+                                "isStatic": true,
+                                "lastClassName": "dKmgdJ",
+                                "rules": Array [
+                                  "fill:none;stroke:#555;stroke-width:1.5px;stroke-opacity:0.5;",
+                                ],
+                              },
+                              "displayName": "Path",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Path-gzi78k-9",
+                              "target": "path",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <path
+                            className="Path-gzi78k-9 dKmgdJ"
+                            d="M182.85714285714286,133.33333333333334C160,133.33333333333334 160,200 137.14285714285714,200"
+                          />
+                        </StyledComponent>
+                      </Path>
+                      <Path
                         d="M182.85714285714286,133.33333333333334C205.71428571428572,133.33333333333334 205.71428571428572,200 228.57142857142858,200"
-                        fill="none"
-                        stroke="#555"
-                        stroke-opacity="0.4"
-                        stroke-width="1.5px"
-                      />
+                        key="5"
+                      >
+                        <StyledComponent
+                          d="M182.85714285714286,133.33333333333334C205.71428571428572,133.33333333333334 205.71428571428572,200 228.57142857142858,200"
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Path-gzi78k-9",
+                                "isStatic": true,
+                                "lastClassName": "dKmgdJ",
+                                "rules": Array [
+                                  "fill:none;stroke:#555;stroke-width:1.5px;stroke-opacity:0.5;",
+                                ],
+                              },
+                              "displayName": "Path",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Path-gzi78k-9",
+                              "target": "path",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <path
+                            className="Path-gzi78k-9 dKmgdJ"
+                            d="M182.85714285714286,133.33333333333334C205.71428571428572,133.33333333333334 205.71428571428572,200 228.57142857142858,200"
+                          />
+                        </StyledComponent>
+                      </Path>
+                      <Circle
+                        active={false}
+                        cx={182.85714285714286}
+                        cy={0}
+                      >
+                        <StyledComponent
+                          active={false}
+                          cx={182.85714285714286}
+                          cy={0}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Circle-gzi78k-11",
+                                "isStatic": false,
+                                "lastClassName": "ixmCOQ",
+                                "rules": Array [
+                                  "fill:",
+                                  [Function],
+                                  ";stroke:",
+                                  [Function],
+                                  ";stroke-width:3px;stroke-opacity:0.6;r:15;",
+                                ],
+                              },
+                              "displayName": "Circle",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Circle-gzi78k-11",
+                              "target": "circle",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <circle
+                            className="Circle-gzi78k-11 ixmCOQ"
+                            cx={182.85714285714286}
+                            cy={0}
+                          />
+                        </StyledComponent>
+                      </Circle>
+                      <Text
+                        active={false}
+                        dx={175.85714285714286}
+                        dy={4}
+                      >
+                        <StyledComponent
+                          active={false}
+                          dx={175.85714285714286}
+                          dy={4}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Text-gzi78k-10",
+                                "isStatic": false,
+                                "lastClassName": "QYyWf",
+                                "rules": Array [
+                                  "font-size:12px;fill:#5f5f5f;fill:",
+                                  [Function],
+                                  ";",
+                                ],
+                              },
+                              "displayName": "Text",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Text-gzi78k-10",
+                              "target": "text",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <text
+                            className="Text-gzi78k-10 QYyWf"
+                            dx={175.85714285714286}
+                            dy={4}
+                          >
+                            34
+                          </text>
+                        </StyledComponent>
+                      </Text>
+                      <Circle
+                        active={false}
+                        cx={137.14285714285714}
+                        cy={66.66666666666667}
+                      >
+                        <StyledComponent
+                          active={false}
+                          cx={137.14285714285714}
+                          cy={66.66666666666667}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Circle-gzi78k-11",
+                                "isStatic": false,
+                                "lastClassName": "ixmCOQ",
+                                "rules": Array [
+                                  "fill:",
+                                  [Function],
+                                  ";stroke:",
+                                  [Function],
+                                  ";stroke-width:3px;stroke-opacity:0.6;r:15;",
+                                ],
+                              },
+                              "displayName": "Circle",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Circle-gzi78k-11",
+                              "target": "circle",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <circle
+                            className="Circle-gzi78k-11 ixmCOQ"
+                            cx={137.14285714285714}
+                            cy={66.66666666666667}
+                          />
+                        </StyledComponent>
+                      </Circle>
+                      <Text
+                        active={false}
+                        dx={130.14285714285714}
+                        dy={70.66666666666667}
+                      >
+                        <StyledComponent
+                          active={false}
+                          dx={130.14285714285714}
+                          dy={70.66666666666667}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Text-gzi78k-10",
+                                "isStatic": false,
+                                "lastClassName": "QYyWf",
+                                "rules": Array [
+                                  "font-size:12px;fill:#5f5f5f;fill:",
+                                  [Function],
+                                  ";",
+                                ],
+                              },
+                              "displayName": "Text",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Text-gzi78k-10",
+                              "target": "text",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <text
+                            className="Text-gzi78k-10 QYyWf"
+                            dx={130.14285714285714}
+                            dy={70.66666666666667}
+                          >
+                            23
+                          </text>
+                        </StyledComponent>
+                      </Text>
+                      <Circle
+                        active={false}
+                        cx={228.57142857142858}
+                        cy={66.66666666666667}
+                      >
+                        <StyledComponent
+                          active={false}
+                          cx={228.57142857142858}
+                          cy={66.66666666666667}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Circle-gzi78k-11",
+                                "isStatic": false,
+                                "lastClassName": "ixmCOQ",
+                                "rules": Array [
+                                  "fill:",
+                                  [Function],
+                                  ";stroke:",
+                                  [Function],
+                                  ";stroke-width:3px;stroke-opacity:0.6;r:15;",
+                                ],
+                              },
+                              "displayName": "Circle",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Circle-gzi78k-11",
+                              "target": "circle",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <circle
+                            className="Circle-gzi78k-11 ixmCOQ"
+                            cx={228.57142857142858}
+                            cy={66.66666666666667}
+                          />
+                        </StyledComponent>
+                      </Circle>
+                      <Text
+                        active={false}
+                        dx={221.57142857142858}
+                        dy={70.66666666666667}
+                      >
+                        <StyledComponent
+                          active={false}
+                          dx={221.57142857142858}
+                          dy={70.66666666666667}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Text-gzi78k-10",
+                                "isStatic": false,
+                                "lastClassName": "QYyWf",
+                                "rules": Array [
+                                  "font-size:12px;fill:#5f5f5f;fill:",
+                                  [Function],
+                                  ";",
+                                ],
+                              },
+                              "displayName": "Text",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Text-gzi78k-10",
+                              "target": "text",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <text
+                            className="Text-gzi78k-10 QYyWf"
+                            dx={221.57142857142858}
+                            dy={70.66666666666667}
+                          >
+                            92
+                          </text>
+                        </StyledComponent>
+                      </Text>
+                      <Circle
+                        active={false}
+                        cx={91.42857142857143}
+                        cy={133.33333333333334}
+                      >
+                        <StyledComponent
+                          active={false}
+                          cx={91.42857142857143}
+                          cy={133.33333333333334}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Circle-gzi78k-11",
+                                "isStatic": false,
+                                "lastClassName": "ixmCOQ",
+                                "rules": Array [
+                                  "fill:",
+                                  [Function],
+                                  ";stroke:",
+                                  [Function],
+                                  ";stroke-width:3px;stroke-opacity:0.6;r:15;",
+                                ],
+                              },
+                              "displayName": "Circle",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Circle-gzi78k-11",
+                              "target": "circle",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <circle
+                            className="Circle-gzi78k-11 ixmCOQ"
+                            cx={91.42857142857143}
+                            cy={133.33333333333334}
+                          />
+                        </StyledComponent>
+                      </Circle>
+                      <Text
+                        active={false}
+                        dx={84.42857142857143}
+                        dy={137.33333333333334}
+                      >
+                        <StyledComponent
+                          active={false}
+                          dx={84.42857142857143}
+                          dy={137.33333333333334}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Text-gzi78k-10",
+                                "isStatic": false,
+                                "lastClassName": "QYyWf",
+                                "rules": Array [
+                                  "font-size:12px;fill:#5f5f5f;fill:",
+                                  [Function],
+                                  ";",
+                                ],
+                              },
+                              "displayName": "Text",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Text-gzi78k-10",
+                              "target": "text",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <text
+                            className="Text-gzi78k-10 QYyWf"
+                            dx={84.42857142857143}
+                            dy={137.33333333333334}
+                          >
+                            12
+                          </text>
+                        </StyledComponent>
+                      </Text>
+                      <Circle
+                        active={false}
+                        cx={182.85714285714286}
+                        cy={133.33333333333334}
+                      >
+                        <StyledComponent
+                          active={false}
+                          cx={182.85714285714286}
+                          cy={133.33333333333334}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Circle-gzi78k-11",
+                                "isStatic": false,
+                                "lastClassName": "ixmCOQ",
+                                "rules": Array [
+                                  "fill:",
+                                  [Function],
+                                  ";stroke:",
+                                  [Function],
+                                  ";stroke-width:3px;stroke-opacity:0.6;r:15;",
+                                ],
+                              },
+                              "displayName": "Circle",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Circle-gzi78k-11",
+                              "target": "circle",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <circle
+                            className="Circle-gzi78k-11 ixmCOQ"
+                            cx={182.85714285714286}
+                            cy={133.33333333333334}
+                          />
+                        </StyledComponent>
+                      </Circle>
+                      <Text
+                        active={false}
+                        dx={175.85714285714286}
+                        dy={137.33333333333334}
+                      >
+                        <StyledComponent
+                          active={false}
+                          dx={175.85714285714286}
+                          dy={137.33333333333334}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Text-gzi78k-10",
+                                "isStatic": false,
+                                "lastClassName": "QYyWf",
+                                "rules": Array [
+                                  "font-size:12px;fill:#5f5f5f;fill:",
+                                  [Function],
+                                  ";",
+                                ],
+                              },
+                              "displayName": "Text",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Text-gzi78k-10",
+                              "target": "text",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <text
+                            className="Text-gzi78k-10 QYyWf"
+                            dx={175.85714285714286}
+                            dy={137.33333333333334}
+                          >
+                            4
+                          </text>
+                        </StyledComponent>
+                      </Text>
+                      <Circle
+                        active={false}
+                        cx={137.14285714285714}
+                        cy={200}
+                      >
+                        <StyledComponent
+                          active={false}
+                          cx={137.14285714285714}
+                          cy={200}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Circle-gzi78k-11",
+                                "isStatic": false,
+                                "lastClassName": "ixmCOQ",
+                                "rules": Array [
+                                  "fill:",
+                                  [Function],
+                                  ";stroke:",
+                                  [Function],
+                                  ";stroke-width:3px;stroke-opacity:0.6;r:15;",
+                                ],
+                              },
+                              "displayName": "Circle",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Circle-gzi78k-11",
+                              "target": "circle",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <circle
+                            className="Circle-gzi78k-11 ixmCOQ"
+                            cx={137.14285714285714}
+                            cy={200}
+                          />
+                        </StyledComponent>
+                      </Circle>
+                      <Text
+                        active={false}
+                        dx={130.14285714285714}
+                        dy={204}
+                      >
+                        <StyledComponent
+                          active={false}
+                          dx={130.14285714285714}
+                          dy={204}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Text-gzi78k-10",
+                                "isStatic": false,
+                                "lastClassName": "QYyWf",
+                                "rules": Array [
+                                  "font-size:12px;fill:#5f5f5f;fill:",
+                                  [Function],
+                                  ";",
+                                ],
+                              },
+                              "displayName": "Text",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Text-gzi78k-10",
+                              "target": "text",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <text
+                            className="Text-gzi78k-10 QYyWf"
+                            dx={130.14285714285714}
+                            dy={204}
+                          >
+                            16
+                          </text>
+                        </StyledComponent>
+                      </Text>
+                      <Circle
+                        active={false}
+                        cx={228.57142857142858}
+                        cy={200}
+                      >
+                        <StyledComponent
+                          active={false}
+                          cx={228.57142857142858}
+                          cy={200}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Circle-gzi78k-11",
+                                "isStatic": false,
+                                "lastClassName": "ixmCOQ",
+                                "rules": Array [
+                                  "fill:",
+                                  [Function],
+                                  ";stroke:",
+                                  [Function],
+                                  ";stroke-width:3px;stroke-opacity:0.6;r:15;",
+                                ],
+                              },
+                              "displayName": "Circle",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Circle-gzi78k-11",
+                              "target": "circle",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <circle
+                            className="Circle-gzi78k-11 ixmCOQ"
+                            cx={228.57142857142858}
+                            cy={200}
+                          />
+                        </StyledComponent>
+                      </Circle>
+                      <Text
+                        active={false}
+                        dx={221.57142857142858}
+                        dy={204}
+                      >
+                        <StyledComponent
+                          active={false}
+                          dx={221.57142857142858}
+                          dy={204}
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "Text-gzi78k-10",
+                                "isStatic": false,
+                                "lastClassName": "QYyWf",
+                                "rules": Array [
+                                  "font-size:12px;fill:#5f5f5f;fill:",
+                                  [Function],
+                                  ";",
+                                ],
+                              },
+                              "displayName": "Text",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "Text-gzi78k-10",
+                              "target": "text",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <text
+                            className="Text-gzi78k-10 QYyWf"
+                            dx={221.57142857142858}
+                            dy={204}
+                          >
+                            9
+                          </text>
+                        </StyledComponent>
+                      </Text>
                     </g>
-                    <g>
-                      <g>
-                        <circle
-                          cx="182.85714285714286"
-                          cy="0"
-                          fill="#fff"
-                          r="15"
-                          stroke="#555"
-                          stroke-opacity="0.6"
-                          stroke-width="3px"
-                        />
-                        <text
-                          dx="175.85714285714286"
-                          dy="4"
-                          fill="#5f5f5f"
-                          font-size="12px"
-                        >
-                          34
-                        </text>
-                      </g>
-                      <g>
-                        <circle
-                          cx="137.14285714285714"
-                          cy="66.66666666666667"
-                          fill="#fff"
-                          r="15"
-                          stroke="#555"
-                          stroke-opacity="0.6"
-                          stroke-width="3px"
-                        />
-                        <text
-                          dx="130.14285714285714"
-                          dy="70.66666666666667"
-                          fill="#5f5f5f"
-                          font-size="12px"
-                        >
-                          23
-                        </text>
-                      </g>
-                      <g>
-                        <circle
-                          cx="228.57142857142858"
-                          cy="66.66666666666667"
-                          fill="#fff"
-                          r="15"
-                          stroke="#555"
-                          stroke-opacity="0.6"
-                          stroke-width="3px"
-                        />
-                        <text
-                          dx="221.57142857142858"
-                          dy="70.66666666666667"
-                          fill="#5f5f5f"
-                          font-size="12px"
-                        >
-                          92
-                        </text>
-                      </g>
-                      <g>
-                        <circle
-                          cx="91.42857142857143"
-                          cy="133.33333333333334"
-                          fill="#fff"
-                          r="15"
-                          stroke="#555"
-                          stroke-opacity="0.6"
-                          stroke-width="3px"
-                        />
-                        <text
-                          dx="84.42857142857143"
-                          dy="137.33333333333334"
-                          fill="#5f5f5f"
-                          font-size="12px"
-                        >
-                          12
-                        </text>
-                      </g>
-                      <g>
-                        <circle
-                          cx="182.85714285714286"
-                          cy="133.33333333333334"
-                          fill="#fff"
-                          r="15"
-                          stroke="#555"
-                          stroke-opacity="0.6"
-                          stroke-width="3px"
-                        />
-                        <text
-                          dx="175.85714285714286"
-                          dy="137.33333333333334"
-                          fill="#5f5f5f"
-                          font-size="12px"
-                        >
-                          4
-                        </text>
-                      </g>
-                      <g>
-                        <circle
-                          cx="137.14285714285714"
-                          cy="200"
-                          fill="#fff"
-                          r="15"
-                          stroke="#555"
-                          stroke-opacity="0.6"
-                          stroke-width="3px"
-                        />
-                        <text
-                          dx="130.14285714285714"
-                          dy="204"
-                          fill="#5f5f5f"
-                          font-size="12px"
-                        >
-                          16
-                        </text>
-                      </g>
-                      <g>
-                        <circle
-                          cx="228.57142857142858"
-                          cy="200"
-                          fill="#fff"
-                          r="15"
-                          stroke="#555"
-                          stroke-opacity="0.6"
-                          stroke-width="3px"
-                        />
-                        <text
-                          dx="221.57142857142858"
-                          dy="204"
-                          fill="#5f5f5f"
-                          font-size="12px"
-                        >
-                          9
-                        </text>
-                      </g>
-                    </g>
-                  </g>
-                </svg>,
-              }
-            }
-          >
-            <svg
-              className="Tree-gzi78k-7 dZHjRf"
-            />
-          </StyledComponent>
-        </Tree>
+                  </StyledComponent>
+                </Translate>
+              </svg>
+            </StyledComponent>
+          </SVG>
+        </TreeChart>
       </div>
     </StyledComponent>
   </TreeBox>

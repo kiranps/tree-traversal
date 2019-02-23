@@ -72,7 +72,7 @@ class App extends Component {
       this.traversal = setTimeout(() => {
         this.setState({ tree: [...this.state.tree, arr[0]] });
         this.animateTraversal(arr.slice(1));
-      }, 1000);
+      }, 1500);
     }
   };
 
