@@ -20,6 +20,8 @@ import {
   breadthFirstTraversal
 } from "./helper";
 
+import TreeChart from "./TreeChart";
+
 class App extends Component {
   root: any;
   traversal: any;
@@ -156,7 +158,8 @@ class App extends Component {
     return (
       <Fragment>
         <TreeBox>
-          <Tree ref={this.chart} />
+          <TreeChart />
+          {/* <Tree ref={this.chart} /> */}
         </TreeBox>
         <SelectionBox>
           <Select onChange={this.handleChange}>

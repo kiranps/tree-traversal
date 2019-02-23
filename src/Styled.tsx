@@ -72,6 +72,35 @@ const Tree = styled.svg`
   height: 260px;
 `;
 
+const SVG = styled.svg`
+  width: 200px;
+  height: 260px;
+`;
+
+const Path = styled.path`
+  fill: none;
+  stroke: #555;
+  stroke-width: 1.5px;
+  stroke-opacity: 0.5;
+`;
+
+const Text = styled.text`
+  font-size: 12px;
+  fill: #5f5f5f;
+`;
+
+const Circle = styled.circle`
+  fill: #fff;
+  stroke: #555;
+  stroke-width: 3px;
+  stroke-opacity: 0.6;
+  r: 15;
+`;
+
+const Translate = styled.g`
+  transform: translate(-70px, 30px);
+`;
+
 export {
   TreeBox,
   Tree,
@@ -80,5 +109,10 @@ export {
   Option,
   TraversedList,
   Item,
-  Button
+  Button,
+  SVG,
+  Text,
+  Path,
+  Circle,
+  Translate
 };
