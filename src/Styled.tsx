@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { Children } from "react";
 
 const TreeBox = styled.div`
   position: absolute;
@@ -84,14 +85,19 @@ const Path = styled.path`
   stroke-opacity: 0.5;
 `;
 
-const Text = styled.text`
+interface Props {
+  active: boolean;
+}
+
+const Text = styled.text<Props>`
   font-size: 12px;
   fill: #5f5f5f;
+  fill: ${props => (props.active ? "#fff" : "#5f5f5f5")};
 `;
 
-const Circle = styled.circle`
-  fill: #fff;
-  stroke: #555;
+const Circle = styled.circle<Props>`
+  fill: ${props => (props.active ? "#2196F3" : "#fff")};
+  stroke: ${props => (props.active ? "#2196F3" : "#555")};
   stroke-width: 3px;
   stroke-opacity: 0.6;
   r: 15;

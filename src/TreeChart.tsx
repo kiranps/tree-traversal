@@ -1,28 +1,33 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import * as d3 from "d3";
-import { TREE_DATA } from "./constants";
-import { preOrderTraversal, diagonal } from "./helper";
+import { diagonal } from "./helper";
 import { SVG, Text, Circle, Path, Translate } from "./Styled";
 
-export default class TreeChart extends Component {
-  root: any;
-  arr: any;
-  chart: any;
-  nodes: any;
-  constructor(props: any) {
-    super(props);
-    const treeLayout = d3.tree().size([320, 200]);
-    const root = d3.hierarchy(TREE_DATA);
-    treeLayout(root);
-    this.root = root;
-    this.arr = preOrderTraversal(this.root);
-    this.chart = React.createRef();
-  }
+interface Node {
+  value: string;
+  children: Node[];
+}
+
+interface NodeParsed {
+  x: Float32Array;
+  y: Float32Array;
+  value: number;
+}
+interface TreeChartProps {
+  data: Node;
+  parsed: NodeParsed[];
+}
+
+export default class TreeChart extends PureComponent<TreeChartProps> {
+  root: any = d3.tree().size([320, 200])(d3.hierarchy(this.props.data));
 
   render() {
+    const { parsed } = this.props;
     const lines = this.root.links().map(diagonal);
-    const circles = this.root.descendants();
-    console.log(circles);
+    const circles = this.root.descendants().map((x: any) => ({
+      ...x,
+      active: parsed.findIndex(d => d.x === x.x && d.y === x.y) >= 0
+    }));
 
     return (
       <SVG>
@@ -31,9 +36,9 @@ export default class TreeChart extends Component {
             <Path key={i} d={x} />
           ))}
           {circles.map((x: any, i: number) => (
-            <React.Fragment>
-              <Circle key={i} cx={x.x} cy={x.y} />
-              <Text dx={x.x - 7} dy={x.y + 4}>
+            <React.Fragment key={i}>
+              <Circle cx={x.x} cy={x.y} active={x.active} />
+              <Text dx={x.x - 7} dy={x.y + 4} active={x.active}>
                 {x.value}
               </Text>
             </React.Fragment>
