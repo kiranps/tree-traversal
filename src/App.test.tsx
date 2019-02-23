@@ -41,6 +41,82 @@ it("should animate the tree in inorder", () => {
     component.update();
     expect(
       component
+        .find("Text")
+        .filterWhere(n => n.props().active)
+        .map(x => x.text())
+        .sort()
+    ).toEqual(inorder.slice(0, i + 1).sort());
+  });
+});
+
+it("should animate the tree in postorder", () => {
+  const postorder = ["12", "16", "9", "4", "23", "92", "34"];
+  const component = mount(<App />);
+  component
+    .find("Select")
+    .simulate("change", { target: { value: "postorder" } });
+  component.find("Button").simulate("click");
+  postorder.forEach((x, i) => {
+    jest.advanceTimersByTime(1500);
+    component.update();
+    expect(
+      component
+        .find("Text")
+        .filterWhere(n => n.props().active)
+        .map(x => x.text())
+        .sort()
+    ).toEqual(postorder.slice(0, i + 1).sort());
+  });
+});
+
+it("should animate the tree in preorder", () => {
+  const preorder = ["34", "23", "12", "4", "16", "9", "92"];
+  const component = mount(<App />);
+  component
+    .find("Select")
+    .simulate("change", { target: { value: "preorder" } });
+  component.find("Button").simulate("click");
+  preorder.forEach((x, i) => {
+    jest.advanceTimersByTime(1500);
+    component.update();
+    expect(
+      component
+        .find("Text")
+        .filterWhere(n => n.props().active)
+        .map(x => x.text())
+        .sort()
+    ).toEqual(preorder.slice(0, i + 1).sort());
+  });
+});
+
+it("should animate the tree in bft", () => {
+  const bft = ["34", "23", "92", "12", "4", "16", "9"];
+  const component = mount(<App />);
+  component.find("Select").simulate("change", { target: { value: "bft" } });
+  component.find("Button").simulate("click");
+  bft.forEach((x, i) => {
+    jest.advanceTimersByTime(1500);
+    component.update();
+    expect(
+      component
+        .find("Text")
+        .filterWhere(n => n.props().active)
+        .map(x => x.text())
+        .sort()
+    ).toEqual(bft.slice(0, i + 1).sort());
+  });
+});
+
+it("should animate the traverse list in inorder", () => {
+  const inorder = ["12", "23", "16", "4", "9", "34", "92"];
+  const component = mount(<App />);
+  component.find("Select").simulate("change", { target: { value: "inorder" } });
+  component.find("Button").simulate("click");
+  inorder.forEach((x, i) => {
+    jest.advanceTimersByTime(1500);
+    component.update();
+    expect(
+      component
         .find("Item")
         .at(i)
         .text()
@@ -48,7 +124,7 @@ it("should animate the tree in inorder", () => {
   });
 });
 
-it("should animate tree in postorder", () => {
+it("should animate traverse list in postorder", () => {
   const postorder = ["12", "16", "9", "4", "23", "92", "34"];
   const component = mount(<App />);
   component
@@ -67,7 +143,7 @@ it("should animate tree in postorder", () => {
   });
 });
 
-it("should animate tree in preorder", () => {
+it("should animate traverse list in preorder", () => {
   const preorder = ["34", "23", "12", "4", "16", "9", "92"];
   const component = mount(<App />);
   component
@@ -86,7 +162,7 @@ it("should animate tree in preorder", () => {
   });
 });
 
-it("should animate tree in bft", () => {
+it("should animate traverse list in bft", () => {
   const bft = ["34", "23", "92", "12", "4", "16", "9"];
   const component = mount(<App />);
   component.find("Select").simulate("change", { target: { value: "bft" } });
