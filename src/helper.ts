@@ -1,75 +1,54 @@
-interface Node {
-  x: Float32Array;
-  y: Float32Array;
-  value: number;
-  children: Node[];
-}
+import { Node } from "./types";
 
-interface NodeArr {
-  x: Float32Array;
-  y: Float32Array;
-  value: number;
-}
+const LEFT = 0;
+const RIGHT = 1;
 
-export const preOrderTraversal = (
-  node: Node,
-  arr: NodeArr[] = []
-): NodeArr[] => {
+export const preOrderTraversal = (node: Node, arr: Node[] = []): Node[] => {
   if (node) {
     const n = node.children || [];
-    arr.push({ x: node.x, y: node.y, value: node.value });
-    preOrderTraversal(n[0], arr);
-    preOrderTraversal(n[1], arr);
+    arr.push(node);
+    preOrderTraversal(n[LEFT], arr);
+    preOrderTraversal(n[RIGHT], arr);
   }
   return arr;
 };
 
-export const postOrderTraversal = (
-  node: Node,
-  arr: NodeArr[] = []
-): NodeArr[] => {
+export const postOrderTraversal = (node: Node, arr: Node[] = []): Node[] => {
   if (node) {
     const n = node.children || [];
-    postOrderTraversal(n[0], arr);
-    postOrderTraversal(n[1], arr);
-    arr.push({ x: node.x, y: node.y, value: node.value });
+    postOrderTraversal(n[LEFT], arr);
+    postOrderTraversal(n[RIGHT], arr);
+    arr.push(node);
   }
   return arr;
 };
 
-export const inOrderTraversal = (
-  node: Node,
-  arr: NodeArr[] = []
-): NodeArr[] => {
+export const inOrderTraversal = (node: Node, arr: Node[] = []): Node[] => {
   if (node) {
     const n = node.children || [];
-    inOrderTraversal(n[0], arr);
-    arr.push({ x: node.x, y: node.y, value: node.value });
-    inOrderTraversal(n[1], arr);
+    inOrderTraversal(n[LEFT], arr);
+    arr.push(node);
+    inOrderTraversal(n[RIGHT], arr);
   }
   return arr;
 };
 
-export const breadthFirstTraversal = (node: Node): NodeArr[] => {
+export const breadthFirstTraversal = (node: Node): Node[] => {
   let queue = [node];
-  const arr: NodeArr[] = [];
+  const arr: Node[] = [];
 
   while (queue.length) {
     let currentNode = queue.shift();
 
     if (currentNode) {
       const n = currentNode.children || [];
-      if (n[0]) {
-        queue.push(currentNode.children[0]);
+      if (n[LEFT]) {
+        queue.push(n[LEFT]);
       }
-      if (n[1]) {
-        queue.push(currentNode.children[1]);
+      if (n[RIGHT]) {
+        queue.push(n[RIGHT]);
       }
-      arr.push({
-        x: currentNode.x,
-        y: currentNode.y,
-        value: currentNode.value
-      });
+      arr.push(currentNode);
     }
   }
   return arr;

@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from "react";
 import * as d3 from "d3";
+import TreeChart from "./TreeChart";
 import { TREE_DATA } from "./constants";
+import { Node } from "./types";
 import {
   TreeBox,
   SelectionBox,
@@ -18,13 +20,6 @@ import {
   breadthFirstTraversal
 } from "./helper";
 
-import TreeChart from "./TreeChart";
-
-interface Node {
-  x: Float32Array;
-  y: Float32Array;
-  value: number;
-}
 class App extends Component {
   root: any = d3.tree().size([320, 200])(d3.hierarchy(TREE_DATA));
   arr: Node[] = preOrderTraversal(this.root);
