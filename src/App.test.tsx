@@ -178,3 +178,14 @@ it("should animate traverse list in bft", () => {
     ).toEqual(bft[i]);
   });
 });
+
+it("should stop tree traversal and reset tree", () => {
+  const component = mount(<App />);
+  component.find("Select").simulate("change", { target: { value: "bft" } });
+  component.find("Button").simulate("click");
+  jest.advanceTimersByTime(5000);
+  component.update();
+  expect(component.find("Text").everyWhere(n => n.props().active)).toBe(false);
+  component.find("Button").simulate("click");
+  expect(component.find("Text").everyWhere(n => !n.props().active)).toBe(true);
+});
