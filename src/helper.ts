@@ -1,4 +1,4 @@
-import { Node } from "./types";
+import { Node, PointLink } from "./types";
 
 const LEFT = 0;
 const RIGHT = 1;
@@ -54,7 +54,7 @@ export const breadthFirstTraversal = (node: Node): Node[] => {
   return arr;
 };
 
-export function diagonal(d: any) {
+export function diagonal(d: PointLink): string {
   return (
     "M" +
     d.source.x +

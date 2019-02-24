@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import * as d3 from "d3";
 import TreeChart from "./TreeChart";
 import { TREE_DATA } from "./constants";
-import { Node, PointNode, AppState, SelectChangeEvent } from "./types";
+import { Node, AppState, SelectChangeEvent } from "./types";
 import {
   TreeBox,
   SelectionBox,
