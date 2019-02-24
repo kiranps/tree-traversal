@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import * as d3 from "d3";
 import TreeChart from "./TreeChart";
 import { TREE_DATA } from "./constants";
-import { Node } from "./types";
+import { Node, PointNode, AppState, SelectChangeEvent } from "./types";
 import {
   TreeBox,
   SelectionBox,
@@ -20,16 +20,14 @@ import {
   breadthFirstTraversal
 } from "./helper";
 
-class App extends Component {
-  root: any = d3.tree().size([320, 200])(d3.hierarchy(TREE_DATA));
+class App extends Component<{}, AppState> {
+  root: Node = d3.tree().size([320, 200])(d3.hierarchy(TREE_DATA));
   arr: Node[] = preOrderTraversal(this.root);
-  traversal: any;
-  chart: any;
-  nodes: any;
+  traversal?: number;
 
   state = { traversing: false, tree: [] };
 
-  handleChange = (e: any) => {
+  handleChange = (e: SelectChangeEvent) => {
     let traversalType = e.target.value;
 
     switch (traversalType) {
@@ -62,7 +60,7 @@ class App extends Component {
     this.animateTraversal(this.arr);
   };
 
-  animateTraversal = (arr: any[]) => {
+  animateTraversal = (arr: Node[]) => {
     if (arr.length > 0) {
       this.traversal = setTimeout(() => {
         this.setState({ tree: [...this.state.tree, arr[0]] });
@@ -89,7 +87,7 @@ class App extends Component {
             {traversing ? "stop" : "start"}
           </Button>
           <TraversedList>
-            {tree.map((x: any, i) => (
+            {tree.map((x: Node, i) => (
               <Item key={i}>{x.value}</Item>
             ))}
           </TraversedList>
